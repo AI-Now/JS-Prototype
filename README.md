@@ -1,26 +1,27 @@
 
-    ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+    ___       __     .__   __.   ______   ____    __    ____ 
+    /   \     |  |    |  \ |  |  /  __  \  \   \  /  \  /   / 
+   /  ^  \    |  |    |   \|  | |  |  |  |  \   \/    \/   /  
+  /  /_\  \   |  |    |  . `  | |  |  |  |   \            /   
+ /  _____  \  |  |    |  |\   | |  `--'  |    \    /\    /    
+/__/     \__\ |__|    |__| \__|  \______/      \__/  \__/     
+-------------------------------------------------------------                                                            
+                                                        
+Welcome to the AI Now JS Prototype!
 
+To get you started understanding how the AI Now system works, or _will work_, we have created this codebase.
 
-Welcome to Cloud9 IDE!
+1) Try out the demo app here: [:: CURRENTLY OFFLINE ::](https://ainow-v7-proto-c9-ainow.c9.io), or clone the repo and run the server.js node-script.
 
-To get you started, we have created a demo chat application.
+2) Read the client/lib/synth.js file
 
-1) Open the server.js file
+3) Browse through the rest of the code in client/lib/*
 
-2) Click the 'Run' button at the top to start your server,
+We hope you will
 
-3) Click the URL that is emitted to the Output tab of the console
+## Feedback or Questions
 
-Happy coding!
-The Cloud9 IDE team
+Visit [the website](http://ainow.weebly.com) for documentation, or [the forums](http://muut.com/ainow) for support.
 
-## Support & Documentation
+You can also email us directly using this [Contact Form](http://ainow.weebly.com/contact.html)
 
-Visit http://docs.c9.io for documentation, or http://support.c9.io for support.
-To watch some training videos, visit http://www.youtube.com/user/c9ide.
