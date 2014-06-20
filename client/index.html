@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <title>Chat Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+    <style>
+      body {
+        padding-top: 60px;
+      }
+      .AI {
+        margin: 20px auto; border: 4px solid black; width: 400px; height: 200px;
+      }
+      .AI:hover { background-color: #e3e3ff; }
+      .AI:active { background-color: #212121; }
+    </style>
+    <script>
+      function ChatController($scope) {
+        var socket = io.connect();
+
+        $scope.messages = [];
+        $scope.roster = [];
+        $scope.name = '';
+        $scope.text = '';
+
+        socket.on('connect', function () {
+          $scope.setName();
+        });
+
+        socket.on('message', function (msg) {
+          $scope.messages.push(msg);
+          $scope.$apply();
+        });
+
+        socket.on('roster', function (names) {
+          $scope.roster = names;
+          $scope.$apply();
+        });
+
+        $scope.send = function send() {
+          console.log('Sending message:', $scope.text);
+          socket.emit('message', $scope.text);
+          $scope.text = '';
+        };
+
+        $scope.setName = function setName() {
+          socket.emit('identify', $scope.name);
+        };
+      }
+    </script>
+  </head>
+  <body>
+    <div class="AI"></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <!-- includes for AI Now v7 "Synth" prototype, in order -->
+    <script src="/lib/synth.js"></script>
+    <script src="/lib/graph.js"></script>
+    <script src="/lib/aq.js"></script>
+    <script src="/lib/rx.js"></script>
+    <script src="/lib/rq.js"></script>
+    <script src="/lib/nlp.js"></script>
+    <script src="/lib/interpreter.js"></script>
+    <script src="/lib/synth-demo.js"></script>
+  </body>
+</html>
